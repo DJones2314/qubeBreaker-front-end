@@ -19,6 +19,29 @@ for(let i = 0; i<requestData.length; i++){
 }
 };
 
+function searchDes() {
+document.getElementById("goHere").innerHTML = " ";
+let requestURL = "http://127.0.0.1:8080/api/films/";
+let request = new XMLHttpRequest();
+let userInput = document.getElementById("search").value;
+request.open("GET", requestURL);
+request.setRequestHeader('Content-Type', 'application/json');
+request.setRequestHeader('Access-Control-Allow-Origin','*');
+request.responseType = "json"
+request.send();
+request.onload = function() {
+let requestData = request.response;
+for(let i = 0; i<requestData.length; i++){
+    let title = requestData[i].title;
+    let description = requestData[i].description; 
+    if(title.includes(userInput.toUpperCase())){
+        document.getElementById("goHere").innerHTML += (title + "<br>" + description + "<br>");
+    }
+}
+}
+};
+
+
 function showAll() {
 document.getElementById("goHere").innerHTML = " ";
 let requestURL = "http://127.0.0.1:8080/api/films/";
@@ -38,7 +61,7 @@ for(let i = 0; i<requestData.length; i++){
 }
 };
 
-function catShow() {
+function horrorCat() {
 document.getElementById("goHere").innerHTML = " ";
 let requestURL = "http://127.0.0.1:8080/api/films/";
 let request = new XMLHttpRequest();
@@ -59,7 +82,72 @@ for(let i = 0; i<requestData.length; i++){
 }
 }
 };
-    
+
+function comedyCat() {
+document.getElementById("goHere").innerHTML = " ";
+let requestURL = "http://127.0.0.1:8080/api/films/";
+let request = new XMLHttpRequest();
+let userInput = document.getElementById("search").value;
+request.open("GET", requestURL);
+request.setRequestHeader('Content-Type', 'application/json');
+request.setRequestHeader('Access-Control-Allow-Origin','*');
+request.responseType = "json"
+request.send();
+request.onload = function() {
+let requestData = request.response;
+for(let i = 0; i<requestData.length; i++){
+    let title = requestData[i].title;
+    let category = requestData[i].category;
+    if(category.includes("Comedy")){
+        document.getElementById("goHere").innerHTML += (title + "<br>");
+    }
+}
+}
+};
+
+function childrenCat() {
+document.getElementById("goHere").innerHTML = " ";
+let requestURL = "http://127.0.0.1:8080/api/films/";
+let request = new XMLHttpRequest();
+let userInput = document.getElementById("search").value;
+request.open("GET", requestURL);
+request.setRequestHeader('Content-Type', 'application/json');
+request.setRequestHeader('Access-Control-Allow-Origin','*');
+request.responseType = "json"
+request.send();
+request.onload = function() {
+let requestData = request.response;
+for(let i = 0; i<requestData.length; i++){
+    let title = requestData[i].title;
+    let category = requestData[i].category;
+    if(category.includes("Children")){
+        document.getElementById("goHere").innerHTML += (title + "<br>");
+    }
+}
+}
+};
+
+function actionCat() {
+document.getElementById("goHere").innerHTML = " ";
+let requestURL = "http://127.0.0.1:8080/api/films/";
+let request = new XMLHttpRequest();
+let userInput = document.getElementById("search").value;
+request.open("GET", requestURL);
+request.setRequestHeader('Content-Type', 'application/json');
+request.setRequestHeader('Access-Control-Allow-Origin','*');
+request.responseType = "json"
+request.send();
+request.onload = function() {
+let requestData = request.response;
+for(let i = 0; i<requestData.length; i++){
+    let title = requestData[i].title;
+    let category = requestData[i].category;
+    if(category.includes("Action")){
+        document.getElementById("goHere").innerHTML += (title + "<br>");
+    }
+}
+}
+};    
     
     
     

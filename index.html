@@ -43,7 +43,7 @@
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+              <a class="nav-link js-scroll-trigger" href="#movies">Movies</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
@@ -57,9 +57,9 @@
     <header class="masthead">
       <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
-          <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
-          <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
-          <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+          <h1 class="mx-auto my-0 text-uppercase">QubeBreaker</h1>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">Bring the good times home...</h2>
+          <a href="#movies" class="btn btn-primary js-scroll-trigger">Find a Film</a>
         </div>
       </div>
     </header>
@@ -69,9 +69,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
-            <p class="text-white-50">Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-              <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+            <h2 class="text-white mb-4">How it works</h2>
+            <p class="text-white-50">Simply scroll down to the <a href="#movies">movies section</a>. From there, pick your movie, using our genre section or searching for a particular title. Once you have picked your movie we send it to your device of choice. Sit back, relax and enjoy browsing the most upto date* movie catelog on the planet</p>
           </div>
         </div>
         <img src="img/ipad.png" class="img-fluid" alt="">
@@ -79,7 +78,8 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section bg-light">
+    <div id="theMiddle">
+      <section id="movies" class="projects-section">
       <div class="container">
 
         <!-- Featured Project Row -->
@@ -87,15 +87,19 @@
           <div class="col-xl-8 col-lg-7">
               <p class="img-fluid mb-3 mb-lg-0" id="goHere"></p>
               <input type="text" placeholder="Search For a Movie" id="search"/>
-              <input type="button" onclick="searchMovie()" value="Search"/>
-          </div>
+              <input class="myBtn" type="button" onclick="searchMovie()" value="Search"/>
+              <input class="myBtn" type="button" onclick="searchDes()" value="Description"/>
+          </div>    
           <div class="col-xl-4 col-lg-5">
             <div class="featured-text text-center text-lg-left">
-              <h4>Find People</h4>
-              <p class="text-black-50 mb-0">Find people in our database</p>
-                <input type="button" onclick="showAll()" value="Show all the Movies!"/>
-                <input type="button" onclick="catShow()" value="Display horror movies"/>
-            </div>
+              <h4>Movie Search</h4>
+              <p class="text-black-50 mb-0">Choose how to find your movie</p>
+                <input class="myBtn" type="button" onclick="showAll()" value="Show all the Movies!"/>
+                <input class="myBtn" type="button" onclick="horrorCat()" value="Display horror movies"/>
+                <input class="myBtn" type="button" onclick="comedyCat()" value="Display comedy movies"/>
+                <input class="myBtn" type="button" onclick="childrenCat()" value="Display children friendly movies"/>
+                <input class="myBtn" type="button" onclick="actionCat()" value="Display action movies"/>
+              </div>
           </div>
         </div>
 
@@ -108,8 +112,8 @@
             <div class="bg-black text-center h-100 project">
               <div class="d-flex h-100">
                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                  <h4 class="text-white">Misty</h4>
-                  <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                  <h4 class="text-white">Avengers</h4>
+                  <p class="mb-0 text-white-50">Coming summer of 2019, join your favourite superheros on their quest to stop their toughest nemesis yet!</p>
                   <hr class="d-none d-lg-block mb-0 ml-0">
                 </div>
               </div>
@@ -126,16 +130,15 @@
             <div class="bg-black text-center h-100 project">
               <div class="d-flex h-100">
                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                  <h4 class="text-white">Mountains</h4>
-                  <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                  <h4 class="text-white">Tomb Raider</h4>
+                  <p class="mb-0 text-white-50">Go back to the roots of the toughest rich-girl on the planet with this re-imagined origin story for miss Croft</p>
                   <hr class="d-none d-lg-block mb-0 mr-0">
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-      </div>
+        </div>
     </section>
 
     <!-- Signup Section -->
@@ -156,6 +159,7 @@
         </div>
       </div>
     </section>
+</div>
 
     <!-- Contact Section -->
     <section class="contact-section bg-black">
@@ -169,7 +173,7 @@
                 <i class="fas fa-map-marked-alt text-primary mb-2"></i>
                 <h4 class="text-uppercase m-0">Address</h4>
                 <hr class="my-4">
-                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                <div class="small text-black-50">QA Consulting Anchorage 1, Anchorage Quay, Salford Quays, Salford, Manchester M50 3YJ</div>
               </div>
             </div>
           </div>
@@ -181,7 +185,7 @@
                 <h4 class="text-uppercase m-0">Email</h4>
                 <hr class="my-4">
                 <div class="small text-black-50">
-                  <a href="#">hello@yourdomain.com</a>
+                  <a href="#">djvjones23@gmail.com</a>
                 </div>
               </div>
             </div>
