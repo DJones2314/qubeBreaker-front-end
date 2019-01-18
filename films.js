@@ -1,4 +1,5 @@
 function searchMovie() {
+document.getElementById("goHere").style.visibility = "visible";
 document.getElementById("goHere").innerHTML = " ";
 let requestURL = "http://127.0.0.1:8080/api/films/";
 let request = new XMLHttpRequest();
@@ -20,6 +21,7 @@ for(let i = 0; i<requestData.length; i++){
 };
 
 function searchDes() {
+document.getElementById("goHere").style.visibility = "visible";    
 document.getElementById("goHere").innerHTML = " ";
 let requestURL = "http://127.0.0.1:8080/api/films/";
 let request = new XMLHttpRequest();
@@ -43,6 +45,7 @@ for(let i = 0; i<requestData.length; i++){
 
 
 function showAll() {
+document.getElementById("goHere").style.visibility = "visible";
 document.getElementById("goHere").innerHTML = " ";
 let requestURL = "http://127.0.0.1:8080/api/films/";
 let request = new XMLHttpRequest();
@@ -62,6 +65,7 @@ for(let i = 0; i<requestData.length; i++){
 };
 
 function horrorCat() {
+document.getElementById("goHere").style.visibility = "visible";
 document.getElementById("goHere").innerHTML = " ";
 let requestURL = "http://127.0.0.1:8080/api/films/";
 let request = new XMLHttpRequest();
@@ -84,6 +88,7 @@ for(let i = 0; i<requestData.length; i++){
 };
 
 function comedyCat() {
+document.getElementById("goHere").style.visibility = "visible";
 document.getElementById("goHere").innerHTML = " ";
 let requestURL = "http://127.0.0.1:8080/api/films/";
 let request = new XMLHttpRequest();
@@ -106,6 +111,7 @@ for(let i = 0; i<requestData.length; i++){
 };
 
 function childrenCat() {
+document.getElementById("goHere").style.visibility = "visible";
 document.getElementById("goHere").innerHTML = " ";
 let requestURL = "http://127.0.0.1:8080/api/films/";
 let request = new XMLHttpRequest();
@@ -128,6 +134,7 @@ for(let i = 0; i<requestData.length; i++){
 };
 
 function actionCat() {
+document.getElementById("goHere").style.visibility = "visible";
 document.getElementById("goHere").innerHTML = " ";
 let requestURL = "http://127.0.0.1:8080/api/films/";
 let request = new XMLHttpRequest();

@@ -87,6 +87,7 @@
 }
 
 #goHere{
+    visibility: hidden;
     overflow: scroll;
     max-height: 200px;
     
