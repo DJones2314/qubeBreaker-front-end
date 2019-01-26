@@ -127,7 +127,7 @@
 }
 
 .myBtn:hover {
-  top: -10px;
+  top: -5px;
   box-shadow: 0px 10px 10px rgba( 15, 165, 60, 0.2 );
   
   -webkit-transform: rotateX(20deg);
@@ -239,6 +239,26 @@
   background: -webkit-gradient(linear, left top, left bottom, from(#808080), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
   background: linear-gradient(to top, #808080 90%, rgba(22, 22, 22, 0.9) 100%, rgba(22, 22, 22, 0.8) 100%);
     }
+
+#avenge:hover {
+  top: -20px;
+  box-shadow: 0px 10px 10px rgba( 15, 165, 60, 0.2 );
+  
+  -webkit-transform: rotateX(20deg);
+     -moz-transform: rotateX(20deg);
+      -ms-transform: rotateX(20deg);
+          transform: rotateX(20deg);
+}
+
+#lara:hover {
+  top: -20px;
+  box-shadow: 0px 10px 10px rgba( 15, 165, 60, 0.2 );
+  
+  -webkit-transform: rotateX(20deg);
+     -moz-transform: rotateX(20deg);
+      -ms-transform: rotateX(20deg);
+          transform: rotateX(20deg);
+}
 
 .projects-section {
   padding: 10rem 0;
