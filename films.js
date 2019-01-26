@@ -1,7 +1,7 @@
 function searchMovie() {
 document.getElementById("goHere").style.visibility = "visible";
 document.getElementById("goHere").innerHTML = " ";
-let requestURL = "http://127.0.0.1:8080/api/films/";
+let requestURL = "http://192.168.1.124:8080/api/films/";
 let request = new XMLHttpRequest();
 let userInput = document.getElementById("search").value;
 request.open("GET", requestURL);
@@ -23,7 +23,7 @@ for(let i = 0; i<requestData.length; i++){
 function searchDes() {
 document.getElementById("goHere").style.visibility = "visible";    
 document.getElementById("goHere").innerHTML = " ";
-let requestURL = "http://127.0.0.1:8080/api/films/";
+let requestURL = "http://192.168.1.124:8080/api/films/";
 let request = new XMLHttpRequest();
 let userInput = document.getElementById("search").value;
 request.open("GET", requestURL);
@@ -43,11 +43,34 @@ for(let i = 0; i<requestData.length; i++){
 }
 };
 
+function searchPrice() {
+document.getElementById("goHere").style.visibility = "visible";    
+document.getElementById("goHere").innerHTML = " ";
+let requestURL = "http://192.168.1.124:8080/api/films/";
+let request = new XMLHttpRequest();
+let userInput = document.getElementById("search").value;
+request.open("GET", requestURL);
+request.setRequestHeader('Content-Type', 'application/json');
+request.setRequestHeader('Access-Control-Allow-Origin','*');
+request.responseType = "json"
+request.send();
+request.onload = function() {
+let requestData = request.response;
+for(let i = 0; i<requestData.length; i++){
+    let title = requestData[i].title;
+    let price = requestData[i].price;
+    if(title.includes(userInput.toUpperCase())){
+        document.getElementById("goHere").innerHTML += (title + " " + "£" +price + "<br>");
+    }
+}
+}
+};
+
 
 function showAll() {
 document.getElementById("goHere").style.visibility = "visible";
 document.getElementById("goHere").innerHTML = " ";
-let requestURL = "http://127.0.0.1:8080/api/films/";
+let requestURL = "http://192.168.1.124:8080/api/films/";
 let request = new XMLHttpRequest();
 let userInput = document.getElementById("search").value;
 request.open("GET", requestURL);
@@ -67,7 +90,7 @@ for(let i = 0; i<requestData.length; i++){
 function horrorCat() {
 document.getElementById("goHere").style.visibility = "visible";
 document.getElementById("goHere").innerHTML = " ";
-let requestURL = "http://127.0.0.1:8080/api/films/";
+let requestURL = "http://192.168.1.124:8080/api/films/";
 let request = new XMLHttpRequest();
 let userInput = document.getElementById("search").value;
 request.open("GET", requestURL);
@@ -90,7 +113,7 @@ for(let i = 0; i<requestData.length; i++){
 function comedyCat() {
 document.getElementById("goHere").style.visibility = "visible";
 document.getElementById("goHere").innerHTML = " ";
-let requestURL = "http://127.0.0.1:8080/api/films/";
+let requestURL = "http://192.168.1.124:8080/api/films/";
 let request = new XMLHttpRequest();
 let userInput = document.getElementById("search").value;
 request.open("GET", requestURL);
@@ -113,7 +136,7 @@ for(let i = 0; i<requestData.length; i++){
 function childrenCat() {
 document.getElementById("goHere").style.visibility = "visible";
 document.getElementById("goHere").innerHTML = " ";
-let requestURL = "http://127.0.0.1:8080/api/films/";
+let requestURL = "http://192.168.1.124:8080/api/films/";
 let request = new XMLHttpRequest();
 let userInput = document.getElementById("search").value;
 request.open("GET", requestURL);
@@ -136,7 +159,7 @@ for(let i = 0; i<requestData.length; i++){
 function actionCat() {
 document.getElementById("goHere").style.visibility = "visible";
 document.getElementById("goHere").innerHTML = " ";
-let requestURL = "http://127.0.0.1:8080/api/films/";
+let requestURL = "http://192.168.1.124:8080/api/films/";
 let request = new XMLHttpRequest();
 let userInput = document.getElementById("search").value;
 request.open("GET", requestURL);
